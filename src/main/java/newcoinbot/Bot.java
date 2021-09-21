@@ -15,13 +15,15 @@ public class Bot implements Runnable {
 	
 	private final String pair;
 	private final String startTime;
+	private final BigDecimal amount;
 	private final List<Goal> goals;
 	
 	private BinanceApi biananceApi;
 
-	public Bot(String pair, String startTime,  List<Goal> goals) {
+	public Bot(String pair, String startTime, BigDecimal amount, List<Goal> goals) {
 		this.pair = pair;
 		this.startTime = startTime;
+		this.amount = amount;
 		this.goals = goals;
 	}
 
@@ -42,7 +44,7 @@ public class Bot implements Runnable {
 		waitStartTime(this.startTime);
 		sleep(10);//?
 		//Create Buy MarkerOrderHere
-		LOGGER.info("Creat Buy Market Order");
+		LOGGER.info("Creat Buy Market Order for "+this.pair);
 		
 		while (true) {
 			//Create Market Order
@@ -55,7 +57,7 @@ public class Bot implements Runnable {
 			   long executionTime = getExecutionTime(this.startTime, goal.shift);
 			   if (currentTime>executionTime) {
 				   //Create Sell Market Order
-				   LOGGER.info("Create Sell Market Order");
+				   LOGGER.info("Create Sell Market Order "+this.pair);
 				   goalsIrerator.remove();
 			   }
 			}

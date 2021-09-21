@@ -1,1 +1,20 @@
-[{'pair': 'BTCBUSD','startTime': '2021-09-21 16:35', 'goals': [{'percent': 10, 'shift':'30'}]}]
+[
+	{
+	 'pair': 'BTCBUSD',
+	 'startTime': '2021-09-21 16:54', 
+         'amount': 20,
+	 'goals': [
+			{'percent': 10, 'shift':'10'},
+			{'percent': 20, 'shift':'20'}
+		  ]
+	},
+	{
+	 'pair': 'BNBBUSD',
+	 'startTime': '2021-09-21 16:54',
+	 'amount': 0.3, 
+	 'goals': [
+			{'percent': 10, 'shift':'10'},
+			{'percent': 20, 'shift':'20'}
+		  ]
+	}
+]
