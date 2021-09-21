@@ -9,5 +9,4 @@ public class NewcoinbotApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NewcoinbotApplication.class, args);
 	}
-
 }
