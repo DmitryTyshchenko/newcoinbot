@@ -10,6 +10,7 @@ public class NewcoinbotConfig {
 
 	@Bean
 	public Trading trading() {
-		return new Trading(new HttpBinanceApi());
+		return new Trading(new HttpBinanceApi("", 
+				""));
 	}
 }
